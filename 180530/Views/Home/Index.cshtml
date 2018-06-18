@@ -1,0 +1,15 @@
+﻿@using _180530.Scraper
+@model IEnumerable<Post>
+
+<div class="col-md-6 col-lg-offset-3" style="margin-top: 60px">
+    @foreach (Post post in Model)
+    {
+        <div class="well">
+            <h4><a href="@post.Url" target="_blank">@post.Title</a></h4>
+            <h6>@post.Time</h6>
+            <img src="@post.ImageUrl" style="display: block; margin-left: auto; margin-right: auto; width: 86%; border:2px solid #2A7BBE;"  />
+            <br />
+            <h5>@post.Text</h5>            
+        </div>   
+    }
+</div>
